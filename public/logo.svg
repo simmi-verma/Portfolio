@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Circular background or arc -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="gray" stroke-width="10" opacity="0.4" />
+
+  <!-- Stylized "A" -->
+  <path d="M100 40 L70 130 L85 130 L95 100 L105 100 L115 130 L130 130 Z" fill="gray" />
+  <path d="M92 90 L108 90 L100 65 Z" fill="white" />
+
+  <!-- Text "Simmi" -->
+  <text x="50%" y="170" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="gray">Simmi</text>
+</svg>
