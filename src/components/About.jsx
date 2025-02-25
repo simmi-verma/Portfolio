@@ -41,7 +41,7 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
         <a
-          href="https://drive.google.com/file/d/1Iv01txm9IZadv3gOQtNlW0YYaaErNzOt/view?usp=sharing"
+          href="https://drive.google.com/file/d/1taekiVqEsTV9Bh5zxqVFMV-9xG9BpakC/view?usp=sharing"
           download
           class="flex items-center gap-2 bg-transparent text-white px-4 py-2 rounded-lg hover:scale-105 transition"
         >
