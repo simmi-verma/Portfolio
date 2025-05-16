@@ -41,7 +41,7 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
         <a
-          href="https://drive.google.com/file/d/1taekiVqEsTV9Bh5zxqVFMV-9xG9BpakC/view?usp=sharing"
+          href="https://drive.google.com/file/d/1vNJERHLe3dFnNh_DJzBti56Mux-uPA9d/view?usp=sharing"
           download
           class="flex items-center gap-2 bg-transparent text-white px-4 py-2 rounded-lg hover:scale-105 transition"
         >
@@ -58,7 +58,7 @@ const About = () => {
         variants={fadeIn("" , "" , 0.1 , 1)}
         className='mt-4 text-secondary  text-[17px] max-w-3xl leading-[30px]'
       >
-        As a passionate and skilled Full-Stack Developer, I specialize in crafting seamless web applications and interactive user experiences. With a strong foundation in programming languages such as JavaScript, C++, Python, and expertise in frameworks like React.js and Node.js, I design solutions that blend innovation with functionality. My proficiency extends to databases (SQL, MongoDB), animation tools (Three.js, GSAP), and error monitoring (Sentry).
+        As a passionate and skilled Full-Stack Developer, I specialize in crafting seamless web  and interactive user experiences. With a strong foundation in programming languages such as JavaScript, C++, Python, and expertise in frameworks like React.js and Node.js, I design solutions that blend innovation with functionality. My proficiency extends to databases (SQL, MongoDB), animation tools (Three.js, GSAP), and error monitoring (Sentry).
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

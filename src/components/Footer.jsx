@@ -15,7 +15,7 @@ const Footer = () => {
         </a>
         <a
           className="hover:text-gray-300 hover:scale-110 transition-transform duration-300"
-          href="https://www.linkedin.com/in/Simmi-verma-202300272/"
+          href="https://www.linkedin.com/in/simmi-verma/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -31,7 +31,7 @@ const Footer = () => {
         </a>
         <a
           className="hover:text-gray-300 hover:scale-110 transition-transform duration-300"
-          href="https://github.com/Simmi-verma02"
+          href="https://github.com/simmi-verma"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -41,7 +41,7 @@ const Footer = () => {
 
       {/* Footer Text */}
       <p className="text-sm text-gray-400">
-        © 2025 Simmi Jay Kishan Verma.
+        ©  Simmi Verma.
       </p>
     </div>
   );

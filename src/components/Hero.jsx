@@ -24,8 +24,9 @@ const Hero = () => {
             <span className='text-[#915eff]'> Simmi </span>
             </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop animated-user <br className='sm:block hidden'/>
-            interfaces and web application
+          I specialize in developing full-stack web applications using the MERN stack,
+  <br className='sm:block hidden' />
+  with a strong foundation in Python, C++, and Data Structures & Algorithms.
           </p>
         </div>
 
