@@ -30,7 +30,7 @@ const Contact = () => {
         from_name: form.name,
         to_name: 'Trek',
         from_email: form.email,
-        to_email: 'svindbhopal@gmail.com',
+        to_email: 'XXXXXX@gmail.com',
         message: form.message
       },
       'CjuYjV2uQFLgI13nL'
@@ -61,7 +61,7 @@ const Contact = () => {
 
           <div className='mt-6 text-slate-800 space-y-3 p-4 bg-white/80 rounded-xl border border-slate-200 shadow-sm'>
             <p className='flex items-center gap-3'><span className='text-[20px]'>📧</span> <a href="mailto:svindbhopal@gmail.com" className='text-slate-600 font-medium hover:text-indigo-600 transition-colors duration-300'>svindbhopal@gmail.com</a></p>
-            <p className='flex items-center gap-3'><span className='text-[20px]'>📱</span> <a href="tel:+919407067292" className='text-slate-600 font-medium hover:text-indigo-600 transition-colors duration-300'>+91 90407067292</a></p>
+            <p className='flex items-center gap-3'><span className='text-[20px]'>📱</span> <a href="tel:+919407067292" className='text-slate-600 font-medium hover:text-indigo-600 transition-colors duration-300'>+91 XXXXXXXXXX</a></p>
           </div>
 
           <form
