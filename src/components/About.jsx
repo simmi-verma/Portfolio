@@ -5,11 +5,11 @@ import { fadeIn, textVariant } from '../utils/motion'
 import { services } from "../constant"
 import { Tilt } from 'react-tilt'
 import { SectionWrapper } from '../hoc'
-import hackathon  from '../assets/hackathon.jpg'
+import hackathon from '../assets/hackathon.jpg'
 const ServiceCard = ({ number, text }) => {
   return (
-    <div className="w-[180px] bg-[#111322] rounded-[15px] border border-teal-500/20 py-8 px-4 flex flex-col items-center justify-center gap-2 shadow-lg hover:border-teal-500/50 transition-all duration-300">
-      <h3 className="text-[#bf61ff] text-[42px] font-bold leading-none drop-shadow-[0_0_15px_rgba(191,97,255,0.4)]">
+    <div className="w-[180px] bg-white/60 backdrop-blur-md rounded-[15px] border border-slate-200 py-8 px-4 flex flex-col items-center justify-center gap-2 shadow-sm hover:shadow-md hover:border-[#bf61ff]/50 transition-all duration-300">
+      <h3 className="text-[#bf61ff] text-[42px] font-bold leading-none drop-shadow-[0_2px_10px_rgba(191,97,255,0.3)]">
         {number}
       </h3>
       <p className="text-secondary text-[16px] text-center font-medium mt-2 whitespace-pre-line leading-relaxed">
@@ -64,8 +64,8 @@ const About = () => {
           className="flex-shrink-0 w-full max-w-[400px] lg:w-[450px]"
         >
           <Tilt options={{ max: 15, scale: 1.02, speed: 400 }} className="w-full">
-            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden group shadow-card border-2 border-white/10 p-2 bg-black/20 backdrop-blur-sm">
-              <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
+            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden group shadow-lg border-2 border-slate-200 p-2 bg-white/50 backdrop-blur-md">
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <img
                   src={hackathon}
@@ -74,7 +74,7 @@ const About = () => {
                 />
 
                 {/* Overlay gradient for premium feel */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
               </div>
             </div>
           </Tilt>

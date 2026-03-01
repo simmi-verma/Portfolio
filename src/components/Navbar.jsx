@@ -88,18 +88,18 @@ const Navbar = () => {
           {/* Universal Slide Menu Trigger (Hamburger/Close) */}
           <button
             onClick={() => setToggle(!toggle)}
-            className="w-12 h-12 rounded-full bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.15)] flex flex-col justify-center items-center gap-1.5 hover:bg-[rgba(255,255,255,0.15)] transition-colors group relative z-[60] shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+            className="w-12 h-12 rounded-full bg-white/60 backdrop-blur-md border border-slate-200 flex flex-col justify-center items-center gap-1.5 hover:bg-white/90 transition-colors group relative z-[60] shadow-sm hover:shadow-md"
           >
             {toggle ? (
               <div className="relative w-6 h-6 flex justify-center items-center">
-                <span className="absolute w-6 h-0.5 bg-white group-hover:bg-[#bf61ff] transition-colors rounded-full rotate-45"></span>
-                <span className="absolute w-6 h-0.5 bg-white group-hover:bg-[#bf61ff] transition-colors rounded-full -rotate-45"></span>
+                <span className="absolute w-6 h-0.5 bg-slate-800 group-hover:bg-[#bf61ff] transition-colors rounded-full rotate-45"></span>
+                <span className="absolute w-6 h-0.5 bg-slate-800 group-hover:bg-[#bf61ff] transition-colors rounded-full -rotate-45"></span>
               </div>
             ) : (
               <React.Fragment>
-                <span className="w-5 h-0.5 bg-white group-hover:bg-[#00cea8] transition-colors rounded-full"></span>
-                <span className="w-6 h-0.5 bg-white group-hover:bg-[#bf61ff] transition-colors rounded-full"></span>
-                <span className="w-4 h-0.5 bg-white group-hover:bg-[#00cea8] transition-colors rounded-full self-end mr-3"></span>
+                <span className="w-5 h-0.5 bg-slate-800 group-hover:bg-[#00cea8] transition-colors rounded-full"></span>
+                <span className="w-6 h-0.5 bg-slate-800 group-hover:bg-[#bf61ff] transition-colors rounded-full"></span>
+                <span className="w-4 h-0.5 bg-slate-800 group-hover:bg-[#00cea8] transition-colors rounded-full self-end mr-3"></span>
               </React.Fragment>
             )}
           </button>
@@ -125,10 +125,10 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 w-[85%] sm:w-[400px] h-screen bg-[#050816]/70 backdrop-blur-3xl z-[50] overflow-y-auto border-r border-white/10 shadow-[20px_0_50px_rgba(0,0,0,0.5)] custom-scrollbar"
+              className="fixed top-0 left-0 w-[85%] sm:w-[400px] h-screen bg-white/80 backdrop-blur-3xl z-[50] overflow-y-auto border-r border-slate-200 shadow-2xl custom-scrollbar"
             >
               {/* Sidebar Header */}
-              <div className="flex justify-center items-center p-6 border-b border-white/10 sticky top-0 bg-[#050816]/80 backdrop-blur-2xl z-40 shadow-sm relative text-center">
+              <div className="flex justify-center items-center p-6 border-b border-slate-200 sticky top-0 bg-white/90 backdrop-blur-2xl z-40 shadow-sm relative text-center">
               </div>
 
               {/* Menu Items / Slides */}
@@ -145,7 +145,7 @@ const Navbar = () => {
                       setActive(link.title);
                       setToggle(false);
                     }}
-                    className="relative group w-full h-[150px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#bf61ff]/50 hover:shadow-[0_0_20px_rgba(191,97,255,0.2)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
+                    className="relative group w-full h-[150px] bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden hover:border-[#bf61ff]/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
                   >
                     <SectionThumbnail id={link.id} title={link.title} />
                   </motion.a>

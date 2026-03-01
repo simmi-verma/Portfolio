@@ -11,6 +11,7 @@ import Certification from './Certification.jsx';
 import FloatingMenu from './FloatingMenu';
 import Footer from './Footer';
 import Education from './Education';
+import HeroBackground from './HeroBackground';
 
 export {
   Hero,
@@ -28,5 +29,6 @@ export {
   StarsCanvas,
   FloatingMenu,
   Footer,
-  Education
+  Education,
+  HeroBackground
 };

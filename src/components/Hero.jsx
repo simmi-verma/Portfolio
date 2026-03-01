@@ -19,10 +19,10 @@ const Hero = () => {
           </div>
 
           <div>
-            <h1 className={`${styles.heroHeadText} text-white`}>Hello, I'm
-              <span className='text-[#915eff]'> Simmi </span>
+            <h1 className={`${styles.heroHeadText}`}>Hello, I'm
+              <span className='text-[#bf61ff]'> Simmi </span>
             </h1>
-            <div className={`${styles.heroSubText} mt-2 text-white-100 min-h-[40px] sm:min-h-[50px]`}>
+            <div className={`${styles.heroSubText} mt-2 min-h-[40px] sm:min-h-[50px]`}>
               <span className="text-[#00cea8] font-bold hidden sm:inline-block mr-2">&gt;</span>
               <ReactTyped
                 strings={[
@@ -34,10 +34,10 @@ const Hero = () => {
                 typeSpeed={50}
                 backSpeed={30}
                 loop
-                className="text-[#00cea8]" // Adding a beautiful teal color to the typing text
+                className="text-[#00b095]" // Darker teal for light background readability
               />
             </div>
-            <p className='mt-5 text-secondary text-[16px] sm:text-[18px] max-w-lg leading-[30px]'>
+            <p className='mt-5 text-secondary text-[16px] sm:text-[18px] max-w-lg leading-[30px] font-medium'>
               I specialize in developing scalable full-stack web applications, with a strong foundation in Python, C++, and Data Structures & Algorithms.
             </p>
           </div>

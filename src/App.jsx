@@ -1,34 +1,32 @@
 import { BrowserRouter } from "react-router-dom"
 import { Parallax } from "react-parallax"
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Certification, StarsCanvas, Footer, FloatingMenu, Education } from './components'
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Certification, Footer, FloatingMenu, Education } from './components'
 import herobg from './assets/herobg.png'
 
 const App = () => {
   return (
     <BrowserRouter>
 
-      <div className="relative z-0 bg-primary">
-        {/* Intro Section - Static */}
-        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1d1836] via-primary to-primary">
+      <div className="relative z-0 light-mesh-gradient min-h-screen overflow-hidden">
+        {/* Intro Section */}
+        <div className="relative w-full z-0">
           <Navbar />
           <Hero />
         </div>
 
-        {/* Core Content - Parallax Scrolling Background */}
-        <Parallax bgImage={herobg} strength={400} blur={{ min: -5, max: 5 }}>
-          <div className="bg-primary/90"> {/* Subtle overlay to ensure text readability */}
-            <About />
-            <Experience />
-            <Tech />
-            <Works />
-            <Certification />
-            <Education />
-            <Feedbacks />
-          </div>
-        </Parallax>
+        {/* Core Content - Removed dark parallax to support global light theme */}
+        <div className="relative z-0">
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <Certification />
+          <Education />
+          <Feedbacks />
+        </div>
 
-        {/* Footer Section - Static */}
-        <div className="relative z-0 bg-[#050816]">
+        {/* Footer Section */}
+        <div className="relative z-0">
           <Contact />
         </div>
 
