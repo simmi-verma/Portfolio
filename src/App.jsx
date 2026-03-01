@@ -7,9 +7,9 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      <div className="relative z-0 light-mesh-gradient min-h-screen overflow-hidden">
+      <div className="relative z-0 light-mesh-gradient min-h-screen">
         {/* Intro Section */}
-        <div className="relative w-full z-0">
+        <div className="w-full">
           <Navbar />
           <Hero />
         </div>

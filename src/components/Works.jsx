@@ -24,11 +24,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             <div className='flex items-center justify-center flex-1 w-full'>
               <h3 className='text-slate-800 font-bold text-[26px] text-center drop-shadow-sm'>{name}</h3>
             </div>
-            <p className='text-[#bf61ff] font-medium text-[14px] animate-bounce mb-2'>Hover for details →</p>
+            <p className='text-[#BA90C6] font-medium text-[14px] animate-bounce mb-2'>Hover for details →</p>
           </div>
 
           {/* BACK OF THE CARD */}
-          <div className="absolute w-full h-full bg-white/95 p-6 rounded-2xl backface-hidden rotate-y-180 flex flex-col justify-between border border-[#bf61ff]/30 shadow-xl">
+          <div className="absolute w-full h-full bg-white/95 p-6 rounded-2xl backface-hidden rotate-y-180 flex flex-col justify-between border border-[#BA90C6]/30 shadow-xl">
             <h3 className='text-slate-800 font-bold text-[22px] border-b border-slate-200 pb-2'>{name}</h3>
 
             <p className='mt-3 text-slate-600 text-[14px] flex-1 overflow-y-auto pr-2 custom-scrollbar leading-[22px] font-medium'>

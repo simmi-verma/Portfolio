@@ -60,6 +60,10 @@ import img_coding from "../skill/coding-icon_12254057.png";
       title: "Education",
     },
     {
+      id: "certifications",
+      title: "Certification",
+    },
+    {
       id: "contact",
       title: "Contact",
     },

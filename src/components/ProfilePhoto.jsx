@@ -29,7 +29,7 @@ const ProfilePhoto = () => {
                     className="relative"
                 >
                     {/* Glow effect behind the image */}
-                    <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#9bb1ff] via-[#bf61ff] to-[#6ae1cf] blur-2xl opacity-40 animate-pulse transition duration-500 group-hover:opacity-70" />
+                    <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#E8A0BF] via-[#BA90C6] to-[#E8A0BF] blur-2xl opacity-40 animate-pulse transition duration-500 group-hover:opacity-70" />
 
                     <div className="relative p-[8px] rounded-3xl bg-white shadow-xl">
                         <img

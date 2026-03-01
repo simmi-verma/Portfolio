@@ -77,12 +77,12 @@ const FloatingMenu = () => {
                         <motion.button
                             variants={itemVariants}
                             onClick={handleResume}
-                            className="group flex items-center justify-center w-12 h-12 rounded-full bg-tertiary shadow-[0_0_15px_rgba(255,255,255,0.1)] border border-[#2a2353] hover:border-[#bf61ff] transition-colors relative"
+                            className="group flex items-center justify-center w-12 h-12 rounded-full bg-tertiary shadow-[0_0_15px_rgba(255,255,255,0.1)] border  border-[#BA90C6] hover:border-[#BA90C6] transition-colors relative"
                             title="Download Resume"
                         >
-                            <FaFileDownload className="text-[#bf61ff] text-xl group-hover:scale-110 transition-transform" />
+                            <FaFileDownload className="text-[#BA90C6] text-xl group-hover:scale-110 transition-transform" />
                             {/* Optional: Tooltip label on hover */}
-                            <span className="absolute right-14 bg-tertiary text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-[#2a2353] transition-opacity">
+                            <span className="absolute right-14 bg-[#BA90C6] text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border  border-[#BA90C6] transition-opacity">
                                 Resume
                             </span>
                         </motion.button>
@@ -91,11 +91,11 @@ const FloatingMenu = () => {
                         <motion.button
                             variants={itemVariants}
                             onClick={handleContact}
-                            className="group flex items-center justify-center w-12 h-12 rounded-full bg-tertiary shadow-[0_0_15px_rgba(255,255,255,0.1)] border border-[#2a2353] hover:border-[#00ceae] transition-colors relative"
+                            className="group flex items-center justify-center w-12 h-12 rounded-full bg-tertiary shadow-[0_0_15px_rgba(255,255,255,0.1)] border  border-[#BA90C6] hover:border-[#E8A0BF] transition-colors relative"
                             title="Contact Me"
                         >
-                            <FaEnvelope className="text-[#00cea8] text-xl group-hover:scale-110 transition-transform" />
-                            <span className="absolute right-14 bg-tertiary text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-[#2a2353] transition-opacity">
+                            <FaEnvelope className="text-[#E8A0BF] text-xl group-hover:scale-110 transition-transform" />
+                            <span className="absolute right-14 bg-[#BA90C6] text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border  border-[#BA90C6] transition-opacity">
                                 Contact
                             </span>
                         </motion.button>
@@ -104,11 +104,11 @@ const FloatingMenu = () => {
                         <motion.button
                             variants={itemVariants}
                             onClick={scrollToTop}
-                            className="group flex items-center justify-center w-12 h-12 rounded-full bg-tertiary shadow-[0_0_15px_rgba(255,255,255,0.1)] border border-[#2a2353] hover:border-[#915eff] transition-colors relative"
+                            className="group flex items-center justify-center w-12 h-12 rounded-full bg-tertiary shadow-[0_0_15px_rgba(255,255,255,0.1)] border border-[#BA90C6] hover:border-[#BA90C6] transition-colors relative"
                             title="Scroll to Top"
                         >
-                            <FaArrowUp className="text-[#915eff] text-xl group-hover:-translate-y-1 transition-transform" />
-                            <span className="absolute right-14 bg-tertiary text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-[#2a2353] transition-opacity">
+                            <FaArrowUp className="text-[#BA90C6] text-xl group-hover:-translate-y-1 transition-transform" />
+                            <span className="absolute right-14 bg-[#BA90C6] text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-[#BA90C6] transition-opacity">
                                 Top
                             </span>
                         </motion.button>
@@ -126,9 +126,9 @@ const FloatingMenu = () => {
                 className="w-14 h-14 rounded-full flex items-center justify-center purple-teal-gradient shadow-[0_0_20px_rgba(145,94,255,0.4)] focus:outline-none hover:scale-110 transition-transform z-50 border-2 border-transparent hover:border-white/20"
             >
                 {isOpen ? (
-                    <FaTimes className="text-white text-2xl" />
+                    <FaTimes className="text-[#BA90C6] text-2xl" />
                 ) : (
-                    <FaBars className="text-white text-2xl" />
+                    <FaBars className="text-[#BA90C6] text-2xl" />
                 )}
             </motion.button>
         </div>

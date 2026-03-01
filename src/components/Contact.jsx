@@ -110,7 +110,7 @@ const Contact = () => {
 
             <button
               type='submit'
-              className='bg-gradient-to-r from-indigo-500 to-purple-600 py-3 px-8 text-white font-bold rounded-xl shadow-lg hover:shadow-indigo-500/50 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto self-start mt-2'
+              className='bg-[#E8A0BF] from-indigo-500 to-purple-600 py-3 px-8 text-white font-bold rounded-xl shadow-lg hover:shadow-indigo-500/50 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto self-start mt-2'
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

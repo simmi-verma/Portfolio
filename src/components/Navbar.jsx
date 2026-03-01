@@ -11,6 +11,7 @@ import thumbnailAbout from '../assets/thumbnail_about.png';
 import thumbnailExperience from '../assets/thumbnail_experience.png';
 import thumbnailTech from '../assets/thumbnail_tech.png';
 import thumbnailProjects from '../assets/thumbnail_projects.png';
+import thumbnailCertification from '../assets/thumbnail_certification.png';
 import thumbnailEducation from '../assets/thumbnail_education.png';
 import thumbnailContact from '../assets/thumbnail_contact.png';
 
@@ -22,7 +23,9 @@ const SectionThumbnail = ({ id, title }) => {
       case 'tech': case 'skills': return thumbnailTech;
       case 'projects': return thumbnailProjects;
       case 'education': case 'resume': return thumbnailEducation;
+      case 'certifications': case 'certification': return thumbnailCertification;
       case 'contact': return thumbnailContact;
+
       default: return thumbnailHome;
     }
   };
@@ -35,10 +38,10 @@ const SectionThumbnail = ({ id, title }) => {
       </div>
 
       {/* Dark overlay & Title */}
-      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all duration-500 z-30 flex flex-col justify-end p-4 mt-auto h-full">
+      <div className="absolute inset-0 bg-white/20 group-hover:bg-white/0 transition-all duration-500 z-30 flex flex-col justify-end p-4 mt-auto h-full">
         <div className="mt-auto flex items-center justify-between w-full">
-          <h3 className="text-white font-bold text-xl uppercase tracking-widest drop-shadow-lg bg-black/50 px-3 py-1 rounded-md backdrop-blur-sm border border-white/10">{title}</h3>
-          <span className="text-[#00cea8] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0 bg-black/50 p-2 rounded-full">
+          <h3 className="text-slate-800 font-bold text-xl uppercase tracking-widest drop-shadow-md bg-white/70 px-3 py-1 rounded-md backdrop-blur-md border border-[#BA90C6]/30">{title}</h3>
+          <span className="text-[#BA90C6] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0 bg-white/80 p-2 rounded-full border border-[#BA90C6]/30 shadow-md">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -71,7 +74,7 @@ const Navbar = () => {
   }, [toggle]);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-40 bg-primary/80 backdrop-blur-md`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-40 bg-white/70 backdrop-blur-md shadow-sm border-b border-white/20`}>
       <div className='w-full flex justify-start items-center max-w-7xl mx-auto pl-2 sm:pl-0'>
         <Link to="/"
           className='flex items-center gap-2'
@@ -92,14 +95,14 @@ const Navbar = () => {
           >
             {toggle ? (
               <div className="relative w-6 h-6 flex justify-center items-center">
-                <span className="absolute w-6 h-0.5 bg-slate-800 group-hover:bg-[#bf61ff] transition-colors rounded-full rotate-45"></span>
-                <span className="absolute w-6 h-0.5 bg-slate-800 group-hover:bg-[#bf61ff] transition-colors rounded-full -rotate-45"></span>
+                <span className="absolute w-6 h-0.5 bg-slate-800 group-hover:bg-[#BA90C6] transition-colors rounded-full rotate-45"></span>
+                <span className="absolute w-6 h-0.5 bg-slate-800 group-hover:bg-[#BA90C6] transition-colors rounded-full -rotate-45"></span>
               </div>
             ) : (
               <React.Fragment>
-                <span className="w-5 h-0.5 bg-slate-800 group-hover:bg-[#00cea8] transition-colors rounded-full"></span>
-                <span className="w-6 h-0.5 bg-slate-800 group-hover:bg-[#bf61ff] transition-colors rounded-full"></span>
-                <span className="w-4 h-0.5 bg-slate-800 group-hover:bg-[#00cea8] transition-colors rounded-full self-end mr-3"></span>
+                <span className="w-5 h-0.5 bg-slate-800 group-hover:bg-[#E8A0BF] transition-colors rounded-full"></span>
+                <span className="w-6 h-0.5 bg-slate-800 group-hover:bg-[#BA90C6] transition-colors rounded-full"></span>
+                <span className="w-4 h-0.5 bg-slate-800 group-hover:bg-[#E8A0BF] transition-colors rounded-full self-end mr-3"></span>
               </React.Fragment>
             )}
           </button>
@@ -116,7 +119,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setToggle(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[45] w-screen h-screen"
+              className="fixed inset-0 bg-white/60 backdrop-blur-md z-[45] w-screen h-screen"
             />
 
             {/* Sidebar Container */}
@@ -125,10 +128,10 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 w-[85%] sm:w-[400px] h-screen bg-white/80 backdrop-blur-3xl z-[50] overflow-y-auto border-r border-slate-200 shadow-2xl custom-scrollbar"
+              className="fixed top-0 left-0 w-[85%] sm:w-[400px] h-screen bg-white/80 backdrop-blur-3xl z-[50] overflow-y-auto border-r border-[#BA90C6]/30 shadow-2xl custom-scrollbar"
             >
               {/* Sidebar Header */}
-              <div className="flex justify-center items-center p-6 border-b border-slate-200 sticky top-0 bg-white/90 backdrop-blur-2xl z-40 shadow-sm relative text-center">
+              <div className="flex justify-center items-center p-6 border-b border-[#BA90C6]/30 sticky top-0 bg-white/90 backdrop-blur-2xl z-40 shadow-sm relative text-center">
               </div>
 
               {/* Menu Items / Slides */}
@@ -145,7 +148,7 @@ const Navbar = () => {
                       setActive(link.title);
                       setToggle(false);
                     }}
-                    className="relative group w-full h-[150px] bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden hover:border-[#bf61ff]/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
+                    className="relative group w-full h-[150px] bg-white/50 border border-[#BA90C6]/40 rounded-2xl overflow-hidden hover:bg-white/80 hover:border-[#BA90C6] hover:shadow-[0_0_20px_rgba(186,144,198,0.4)] hover:-translate-y-1 transition-all duration-300 cursor-pointer block"
                   >
                     <SectionThumbnail id={link.id} title={link.title} />
                   </motion.a>

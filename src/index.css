@@ -237,3 +237,8 @@
 .group:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+
+/* Global Override for Vertical Timeline Central Line */
+.vertical-timeline::before {
+  background: #E8A0BF !important;
+}

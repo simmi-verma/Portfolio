@@ -14,16 +14,16 @@ const Hero = () => {
         {/* Left Side: Hero Text */}
         <div className="flex flex-row items-start gap-5">
           <div className='flex flex-col justify-center items-center mt-5'>
-            <div className='w-5 h-5 rounded-full bg-[#915eff]' />
-            <div className='w-1 sm:h-80 h-40 violet-gradient' />
+            <div className='w-5 h-5 rounded-full bg-[#E8A0BF]' />
+            <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-[#E8A0BF] to-transparent' />
           </div>
 
           <div>
             <h1 className={`${styles.heroHeadText}`}>Hello, I'm
-              <span className='text-[#bf61ff]'> Simmi </span>
+              <span className='text-[#BA90C6]'> Simmi </span>
             </h1>
             <div className={`${styles.heroSubText} mt-2 min-h-[40px] sm:min-h-[50px]`}>
-              <span className="text-[#00cea8] font-bold hidden sm:inline-block mr-2">&gt;</span>
+              <span className="text-[#BA90C6] font-bold hidden sm:inline-block mr-2">&gt;</span>
               <ReactTyped
                 strings={[
                   "I'm a Frontend Developer",
@@ -34,7 +34,7 @@ const Hero = () => {
                 typeSpeed={50}
                 backSpeed={30}
                 loop
-                className="text-[#00b095]" // Darker teal for light background readability
+                className="text-[#BA90C6]" // Darker teal for light background readability
               />
             </div>
             <p className='mt-5 text-secondary text-[16px] sm:text-[18px] max-w-lg leading-[30px] font-medium'>
