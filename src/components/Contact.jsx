@@ -61,7 +61,7 @@ const Contact = () => {
 
           <div className='mt-6 text-white space-y-3 p-4 bg-tertiary/50 rounded-xl border border-white/5'>
             <p className='flex items-center gap-3'><span className='text-[20px]'>📧</span> <a href="mailto:svindbhopal@gmail.com" className='text-secondary hover:text-white transition-colors duration-300'>svindbhopal@gmail.com</a></p>
-            <p className='flex items-center gap-3'><span className='text-[20px]'>📱</span> <a href="tel:0407067292" className='text-secondary hover:text-white transition-colors duration-300'>0407067292</a></p>
+            <p className='flex items-center gap-3'><span className='text-[20px]'>📱</span> <a href="tel:+919407067292" className='text-secondary hover:text-white transition-colors duration-300'>+91 90407067292</a></p>
           </div>
 
           <form

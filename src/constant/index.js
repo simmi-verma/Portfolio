@@ -15,7 +15,6 @@ import {
     git,
     figma,
     docker,
-    meta,
     starbucks,
     tesla,
     shopify,
@@ -27,6 +26,8 @@ import {
     cplusplus,
     aws
   } from "../assets";
+  import hackathon from "../assets/company/hackathon.png";
+  import continuous from "../assets/company/continuous.png";
   import bookingAppImage from "../assets/images/bookingapp.png";
   import agrifusion from "../assets/images/agrifusion.png";
   import weather from "../assets/images/weather.png";
@@ -167,7 +168,7 @@ import img_coding from "../skill/coding-icon_12254057.png";
   {
     title: "Hackathon Participant",
     company_name: "Offline Events",
-    icon: meta,
+    icon: hackathon,
     iconBg: "#E6DEDD",
     date: "2025",
     points: [
@@ -179,7 +180,7 @@ import img_coding from "../skill/coding-icon_12254057.png";
      {
     title: "Software Developer Intern",
     company_name: "Random Forest Technology",
-    icon: meta,
+    icon: continuous,
     iconBg: "#383E56",
     date: "Aug 2025 – Sept 2025",
     points: [
