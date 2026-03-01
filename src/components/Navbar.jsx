@@ -129,7 +129,6 @@ const Navbar = () => {
             >
               {/* Sidebar Header */}
               <div className="flex justify-center items-center p-6 border-b border-white/10 sticky top-0 bg-[#050816]/80 backdrop-blur-2xl z-40 shadow-sm relative text-center">
-                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#00cea8] to-[#bf61ff] text-xl font-black tracking-[0.2em] uppercase">Navigation</h2>
               </div>
 
               {/* Menu Items / Slides */}
