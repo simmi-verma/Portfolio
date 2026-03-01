@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex space-x-6">
         <a
           className="hover:text-gray-300 hover:scale-110 transition-transform duration-300"
-          href="https://www.instagram.com/Simmi_jaykishan/"
+          href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -23,7 +23,7 @@ const Footer = () => {
         </a>
         <a
           className="hover:text-gray-300 hover:scale-110 transition-transform duration-300"
-          href="https://www.facebook.com/profile.php?id=100017862300843"
+          href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
