@@ -74,7 +74,7 @@ const Navbar = () => {
   }, [toggle]);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-40 bg-white/70 backdrop-blur-md shadow-sm border-b border-white/20`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-1 fixed top-0 z-40 bg-white/70 backdrop-blur-md shadow-sm border-b border-white/20`}>
       <div className='w-full flex justify-start items-center max-w-7xl mx-auto pl-2 sm:pl-0'>
         <Link to="/"
           className='flex items-center gap-2'
@@ -91,7 +91,7 @@ const Navbar = () => {
           {/* Universal Slide Menu Trigger (Hamburger/Close) */}
           <button
             onClick={() => setToggle(!toggle)}
-            className="w-12 h-12 rounded-full bg-white/60 backdrop-blur-md border border-slate-200 flex flex-col justify-center items-center gap-1.5 hover:bg-white/90 transition-colors group relative z-[60] shadow-sm hover:shadow-md"
+            className="w-10 h-10 rounded-full bg-white/60 backdrop-blur-md border border-slate-200 flex flex-col justify-center items-center gap-1.5 hover:bg-white/90 transition-colors group relative z-[60] shadow-sm hover:shadow-md"
           >
             {toggle ? (
               <div className="relative w-6 h-6 flex justify-center items-center">

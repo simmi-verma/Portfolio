@@ -1,28 +1,39 @@
 import React from "react";
 import hackathon from "../assets/hackathon.jpg";
 import aws from "../assets/aws.png";
+import github from "../assets/github-brands-solid-full.svg";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { Tilt } from "react-tilt";
-
 const certifications = [
+{
+  title: "AWS Certified Cloud Practitioner",
+  description:
+    "Certified in AWS cloud fundamentals with knowledge of core services, security, and architecture. Hands-on experience with EC2, S3, and IAM.",
+  icon: aws,
+  link: "https://www.credly.com/badges/a50d6848-17a8-4a4a-9ae9-77c898c6a11a/linked_in_profile",
+  date: "Amazon Web Services • 2025",
+  color: "from-orange-500 to-yellow-500"
+},
   {
-    title: "AWS Certified Cloud Practitioner",
-    description: "Validated knowledge of AWS services, security, architecture, and billing.",
-    icon: aws,
-    link: "https://www.credly.com/badges/a50d6848-17a8-4a4a-9ae9-77c898c6a11a/linked_in_profile",
-    date: "Amazon Web Services (2024)",
-    color: "from-orange-500 to-yellow-500"
-  },
-  {
-    title: "Hackathons & Open Source",
-    description: "Participated in national-level hackathons and open-source programs, building full-stack applications to solve real-world challenges.",
+    title: "Multiple Hackathons Participation",
+    description:
+      "Built full-stack applications in competitive hackathons using the MERN stack. Focused on scalable solutions, real-time features, and strong team collaboration.",
     icon: hackathon,
     link: "https://www.linkedin.com/in/simmi-verma/",
-    date: "Multiple Projects",
+    date: "2024-2026",
     color: "from-blue-500 to-cyan-500"
+  },
+  {
+    title: "Open Source Contributions",
+    description:
+      "Contributed to open-source projects by improving UI and fixing issues. Experienced with Git workflows, pull requests, and collaborative development.",
+    icon: github,
+    link: "https://github.com/simmi-verma",
+    date: "Ongoing",
+    color: "from-purple-500 to-pink-500"
   },
 ];
 
@@ -34,9 +45,9 @@ const Certifications = () => {
         <h2 className={`${styles.sectionHeadText}`}>Certifications.</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap justify-center gap-10">
+      <div className="mt-20 flex flex-wrap justify-center gap-7">
         {certifications.map((cert, index) => (
-          <Tilt key={index} options={{ max: 45, scale: 1, speed: 450 }} className="w-full sm:w-[360px]">
+          <Tilt key={index} options={{ max: 45, scale: 1, speed: 450 }} className="w-full sm:w-[320px]">
             <motion.div
               variants={fadeIn("up", "spring", index * 0.5, 0.75)}
               className={`w-full h-[450px] p-[1px] rounded-[20px] shadow-md bg-gradient-to-r ${cert.color}`}
