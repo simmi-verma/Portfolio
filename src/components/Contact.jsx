@@ -1,28 +1,22 @@
 import React, { useRef, useState } from 'react'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
-import { EarthCanvas } from './canvas'
-import { slideIn } from '../utils/motion'
-
-
+import { slideIn, fadeIn } from '../utils/motion'
 
 const Contact = () => {
-
   const formRef = useRef();
-  const [form , setForm] = useState({
+  const [form, setForm] = useState({
     name: '',
     email: '',
     message: ''
   });
-
-  const [loading , setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const {name , value} = e.target;
-    setForm({...form , [name]: value});
-
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   }
 
   const handleSubmit = (e) => {
@@ -30,121 +24,101 @@ const Contact = () => {
     setLoading(true);
 
     emailjs.send(
-      'service_kdtmk8q' , 
-      'template_wpxly2w' , 
+      'service_kdtmk8q',
+      'template_wpxly2w',
       {
         from_name: form.name,
         to_name: 'Trek',
         from_email: form.email,
-        to_email: 'mactrek355@gmail.com',
+        to_email: 'svindbhopal@gmail.com',
         message: form.message
       },
       'CjuYjV2uQFLgI13nL'
-    
     )
-    .then(() => {
-      setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible')
-      setForm({
-        name: '',
-        email: '', 
-        message: ''
+      .then(() => {
+        setLoading(false);
+        alert('Thank you. I will get back to you as soon as possible')
+        setForm({ name: '', email: '', message: '' });
       })
-    },
-    (error) => {
-      setLoading(false);
-      console.log(error);
-      alert('An error occurred. Please try again later.')
-    })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
+        alert('An error occurred. Please try again later.')
+      })
   }
-
-
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
 
       <motion.div
-        variants={slideIn('left' , 'tween', 0.2 , 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        variants={fadeIn("up", "spring", 0.3, 1)}
+        className='flex-1 flex flex-col justify-start bg-black-100 p-8 sm:p-10 rounded-2xl relative group border border-white/5 shadow-[0_0_20px_rgba(0,0,0,0.5)]'
       >
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+        <div className="relative z-10">
+          <p className={`${styles.sectionSubText}`}>Get in Touch</p>
+          <h3 className={`${styles.sectionHeadText} text-white mt-1`}>Contact.</h3>
 
-        <p className={styles.sectionSubText}>Get in Touch</p>
-        <h3 className={styles.sectionHeadText}>Contact</h3>
+          <div className='mt-6 text-white space-y-3 p-4 bg-tertiary/50 rounded-xl border border-white/5'>
+            <p className='flex items-center gap-3'><span className='text-[20px]'>📧</span> <a href="mailto:svindbhopal@gmail.com" className='text-secondary hover:text-white transition-colors duration-300'>svindbhopal@gmail.com</a></p>
+            <p className='flex items-center gap-3'><span className='text-[20px]'>📱</span> <a href="tel:0407067292" className='text-secondary hover:text-white transition-colors duration-300'>0407067292</a></p>
+          </div>
 
-        <form action=""
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-
-        >
-          
-          {/* Input field for the name--------------------------------------- */}
-          <label htmlFor=""
-            className='flex flex-col'
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mt-8 flex flex-col gap-6"
           >
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input type="text"
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder='What is your name ?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
-            />
-          </label>
+            <label className='flex flex-col'>
+              <span className='text-white font-medium mb-2'>Your Name</span>
+              <input
+                type="text"
+                name='name'
+                value={form.name}
+                onChange={handleChange}
+                placeholder='What is your name?'
+                className='bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none border border-white/5 transition-all duration-300'
+                required
+              />
+            </label>
 
+            <label className='flex flex-col'>
+              <span className='text-white font-medium mb-2'>Your Email</span>
+              <input
+                type="email"
+                name='email'
+                value={form.email}
+                onChange={handleChange}
+                placeholder='Enter your email address'
+                className='bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none border border-white/5 transition-all duration-300'
+                required
+              />
+            </label>
 
-          {/* input field for the email address------------------------- */}
-          <label htmlFor=""
-            className='flex flex-col'
-          >
-            <span className='text-white font-medium mb-4'>Your Email</span>
-            <input type="email"
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder='Enter your email address'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
-            />
-          </label>
+            <label className='flex flex-col'>
+              <span className='text-white font-medium mb-2'>Your Message</span>
+              <textarea
+                rows="6"
+                name='message'
+                value={form.message}
+                onChange={handleChange}
+                placeholder='Write your message here'
+                className='bg-tertiary py-3 px-4 placeholder:text-secondary text-white rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none border border-white/5 transition-all duration-300'
+                required
+              />
+            </label>
 
-
-          {/* Input field for the  message here-------------------------- */}
-          <label htmlFor=""
-            className='flex flex-col'
-          >
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows="7"
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='Write your message here'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
-            />
-          </label>
-
-          {/* Button the submit the form----------------------  */}
-          <button type='submit'
-           className='bg-tertiary py-3 px-8 outline-node w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
-          >
-            {loading ? "Sending..." : "Send" }
-          </button>
-
-        </form>
-
-      </motion.div>
-
-      <motion.div
-        variants={slideIn('right' , 'tween', 0.2 , 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]' 
-
-      >
-
-        <EarthCanvas />
-
+            <button
+              type='submit'
+              className='bg-gradient-to-r from-indigo-500 to-purple-600 py-3 px-8 text-white font-bold rounded-xl shadow-lg hover:shadow-indigo-500/50 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto self-start mt-2'
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
       </motion.div>
     </div>
   )
 }
 
-export default SectionWrapper( Contact , "contact");
+export default SectionWrapper(Contact, "contact");

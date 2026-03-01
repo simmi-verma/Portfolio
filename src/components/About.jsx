@@ -5,71 +5,83 @@ import { fadeIn, textVariant } from '../utils/motion'
 import { services } from "../constant"
 import { Tilt } from 'react-tilt'
 import { SectionWrapper } from '../hoc'
-
-const ServiceCard = ({ index , title , icon}) => {
+import hackathon  from '../assets/hackathon.jpg'
+const ServiceCard = ({ number, text }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div 
-        variants={fadeIn("right" , "spring" , 0.5 * index , 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-      >
-
-        <div
-          option={{
-            max: 45, 
-            scale: 1,
-            speed: 450
-          }}
-          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-        >
-
-          <img src={icon} alt={title}
-            className='w-16 h-16 object-contain bg-transparent'
-          />
-          <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-        </div>
-
-      </motion.div>
-    </Tilt>
+    <div className="w-[180px] bg-[#111322] rounded-[15px] border border-teal-500/20 py-8 px-4 flex flex-col items-center justify-center gap-2 shadow-lg hover:border-teal-500/50 transition-all duration-300">
+      <h3 className="text-[#bf61ff] text-[42px] font-bold leading-none drop-shadow-[0_0_15px_rgba(191,97,255,0.4)]">
+        {number}
+      </h3>
+      <p className="text-secondary text-[16px] text-center font-medium mt-2 whitespace-pre-line leading-relaxed">
+        {text}
+      </p>
+    </div>
   )
 }
 
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+      <motion.div variants={textVariant()} className="flex justify-between items-center flex-wrap gap-4">
+        <div>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </div>
+
         <a
-          href="https://drive.google.com/file/d/1AOUhF0PTAnqqbb2FEC0ewX3twz4EY94g/view?usp=sharing"
+          href="https://drive.google.com/file/d/15go7isa3CmEPjyU9b3d4LD52Xzxsyd0Y/view?usp=sharing"
           download
-          class="flex items-center gap-2 bg-transparent text-white px-4 py-2 rounded-lg hover:scale-105 transition"
+          className="flex items-center gap-2 bg-gradient-to-r from-teal-400 to-emerald-500 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
         >
-          See My Career Journey
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <g transform="rotate(270 12 12)">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 12l-7 7m0 0l-7-7m7 7V5" />
-            </g>
+          Download Resume
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 -rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 12l-7 7m0 0l-7-7m7 7V5" />
           </svg>
         </a>
       </motion.div>
 
-      <motion.p 
-        variants={fadeIn("" , "" , 0.1 , 1)}
-        className='mt-4 text-secondary  text-[17px] max-w-3xl leading-[30px]'
-      >
-        As a passionate and skilled Full-Stack Developer, I specialize in crafting seamless web  and interactive user experiences. With a strong foundation in programming languages such as JavaScript, C++, Python, and expertise in frameworks like React.js and Node.js, I design solutions that blend innovation with functionality. My proficiency extends to databases (SQL, MongoDB), animation tools (Three.js, GSAP), and error monitoring (Sentry).
-      </motion.p>
+      <div className="mt-12 flex flex-col lg:flex-row gap-16 items-center lg:items-start">
+        {/* Left Side: Text and Cards */}
+        <div className="flex-1 w-full">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className='text-secondary text-[17px] leading-[30px] text-justify'
+          >
+            I'm a passionate full-stack developer with a strong foundation in web technologies and cloud computing. As an AWS Certified Cloud Practitioner, I bring expertise in both front-end and back-end development, along with hands-on experience in cloud technologies and open-source contributions. <br /><br />
+            I actively contribute to open-source projects and participate in hackathons to build impactful solutions. My experience includes working with modern frameworks like React.js, Node.js, and cloud platforms like AWS. I'm always eager to learn new technologies and collaborate on innovative projects.
+          </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+          <div className='mt-10 flex flex-wrap gap-6 justify-center lg:justify-start'>
+            {services.map((service, index) => (
+              <ServiceCard key={service.title} index={index} {...service} />
+            ))}
+          </div>
+        </div>
 
-        {services.map((service , index) => (
-          <ServiceCard key={service.title} index={index} {...service}/>
-        ))}
+        {/* Right Side: Profile Image */}
+        <motion.div
+          variants={fadeIn("left", "tween", 0.2, 1)}
+          className="flex-shrink-0 w-full max-w-[400px] lg:w-[450px]"
+        >
+          <Tilt options={{ max: 15, scale: 1.02, speed: 400 }} className="w-full">
+            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden group shadow-card border-2 border-white/10 p-2 bg-black/20 backdrop-blur-sm">
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
+                <img
+                  src={hackathon}
+                  alt="Profile"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700"
+                />
 
+                {/* Overlay gradient for premium feel */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              </div>
+            </div>
+          </Tilt>
+        </motion.div>
       </div>
     </>
   )
 }
 
-export default SectionWrapper(About , "about" )
+export default SectionWrapper(About, "about")

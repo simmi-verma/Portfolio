@@ -7,7 +7,10 @@ import Experience from './Experience';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
+import Certification from './Certification.jsx';
+import FloatingMenu from './FloatingMenu';
 import Footer from './Footer';
+import Education from './Education';
 
 export {
   Hero,
@@ -16,11 +19,14 @@ export {
   Tech,
   Experience,
   Works,
+  Certification,
   Feedbacks,
   Contact,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
-  Footer
-}
+  FloatingMenu,
+  Footer,
+  Education
+};

@@ -1,32 +1,43 @@
 import { BrowserRouter } from "react-router-dom"
-import { About , Contact , Experience, Feedbacks , Hero , Navbar, Tech , Works , StarsCanvas, Footer} from './components'
+import { Parallax } from "react-parallax"
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Certification, StarsCanvas, Footer, FloatingMenu, Education } from './components'
+import herobg from './assets/herobg.png'
 
 const App = () => {
-
   return (
     <BrowserRouter>
 
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        {/* Intro Section - Static */}
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1d1836] via-primary to-primary">
           <Navbar />
           <Hero />
         </div>
 
-        <About/> 
-        <Experience/>
-        <Tech/>
-        <Works/>
-        <Feedbacks/>
+        {/* Core Content - Parallax Scrolling Background */}
+        <Parallax bgImage={herobg} strength={400} blur={{ min: -5, max: 5 }}>
+          <div className="bg-primary/90"> {/* Subtle overlay to ensure text readability */}
+            <About />
+            <Experience />
+            <Tech />
+            <Works />
+            <Certification />
+            <Education />
+            <Feedbacks />
+          </div>
+        </Parallax>
 
-        <div className="relative z-0">
-          <Contact/>
-          <StarsCanvas />
+        {/* Footer Section - Static */}
+        <div className="relative z-0 bg-[#050816]">
+          <Contact />
         </div>
 
-        
         <div>
-          <Footer/>
+          <Footer />
         </div>
+
+        {/* Global Floating Action Buttons */}
+        <FloatingMenu />
       </div>
 
     </BrowserRouter>

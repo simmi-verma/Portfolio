@@ -1,0 +1,16 @@
+[31mx[39m Build failed in 836ms
+[31merror during build:
+[31m[vite:build-import-analysis] [plugin vite:build-import-analysis] src/components/canvas/index.js (11:13): Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.[31m
+file: [36mD:/intenshalla/project 2/Portfolio/src/components/canvas/index.js:11:13[31m
+[33m
+ 9:   <Suspense fallback={null}>
+10:     <Earth {...props} />
+11:   </Suspense>
+                 ^
+12: );
+[31m
+    at getRollupError (file:///D:/intenshalla/project%202/Portfolio/node_modules/rollup/dist/es/shared/parseAst.js:396:41)
+    at error (file:///D:/intenshalla/project%202/Portfolio/node_modules/rollup/dist/es/shared/parseAst.js:392:42)
+    at Object.error (file:///D:/intenshalla/project%202/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:20751:20)
+    at Object.error (file:///D:/intenshalla/project%202/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:19810:42)
+    at Object.transform (file:///D:/intenshalla/project%202/Portfolio/node_modules/vite/dist/node/chunks/dep-BJP6rrE_.js:50088:14)[39m
