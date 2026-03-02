@@ -9,8 +9,8 @@ export const textVariant = (delay) => {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 1.25,
-          delay: delay,
+          duration: 3.75,
+          delay: delay * 3,
         },
       },
     };
@@ -29,8 +29,8 @@ export const textVariant = (delay) => {
         opacity: 1,
         transition: {
           type: type,
-          delay: delay,
-          duration: duration,
+          delay: delay * 3,
+          duration: duration * 3,
           ease: "easeOut",
         },
       },
@@ -48,8 +48,8 @@ export const textVariant = (delay) => {
         opacity: 1,
         transition: {
           type: "tween",
-          delay: delay,
-          duration: duration,
+          delay: delay * 3,
+          duration: duration * 3,
           ease: "easeOut",
         },
       },
@@ -67,8 +67,8 @@ export const textVariant = (delay) => {
         y: 0,
         transition: {
           type: type,
-          delay: delay,
-          duration: duration,
+          delay: delay * 3,
+          duration: duration * 3,
           ease: "easeOut",
         },
       },
@@ -80,8 +80,8 @@ export const textVariant = (delay) => {
       hidden: {},
       show: {
         transition: {
-          staggerChildren: staggerChildren,
-          delayChildren: delayChildren || 0,
+          staggerChildren: staggerChildren * 3,
+          delayChildren: (delayChildren || 0) * 3,
         },
       },
     };

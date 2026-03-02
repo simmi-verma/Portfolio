@@ -12,7 +12,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full sm:w-auto">
       <div className="group perspective-1000 w-full sm:w-[360px] max-w-full h-[420px] bg-transparent rounded-2xl cursor-pointer">
-        <div className="relative w-full h-full duration-700 transform-style-3d flip-card-inner rounded-2xl shadow-lg">
+        <div className="relative w-full h-full duration-[3000ms] transform-style-3d flip-card-inner rounded-2xl shadow-lg">
 
           {/* FRONT OF THE CARD */}
           <div className="absolute w-full h-full bg-white/60 backdrop-blur-md p-5 rounded-2xl backface-hidden flex flex-col justify-between items-center border border-slate-200 shadow-sm">
@@ -50,7 +50,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                   e.stopPropagation();
                   window.open(source_code_link, "_blank");
                 }}
-                className='black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-110 shadow-lg border border-[#333]'
+                className='black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer transition-transform duration-[1500ms] hover:scale-110 shadow-lg border border-[#333]'
               >
                 <img src={github} alt="github" className='w-1/2 h-1/2 object-contain' />
               </div>
